@@ -73,7 +73,7 @@
   }
   .section-2-second {
     width: 100%;
-    padding: 0px 10px 0px 10px;
+    padding: 20px 10px 20px 10px;
   }
   .sec-2-img {
     width: 100%;
@@ -101,6 +101,12 @@
     width: 100%;
     padding: 50px 0px;
     height: fit-content;
+  }
+  .owl-dot span{
+    width: 15px!important;height: 15px!important
+  }
+  .active span{
+    border: 2px solid #fff!important
   }
   .section-3 img {
     width: 100%;
@@ -188,6 +194,11 @@
     width: 100%;
     padding: 0px 10px 30px;
   }
+  
+
+.sec-9-second h3 {
+    font-weight: 100;
+    width: fit-content;}
   .section-10 {
     flex-direction: column;
   }
@@ -204,21 +215,27 @@
   }
   .sec-10-second {
     width: 100%;
-    padding: 50px 10px 30px;
+    padding: 40px 10px 40px 10px;
   }
   .sec-10-img {
     flex-direction: column;
     width: 100%;
   }
+  .overlay-2nd{
+    width: 100%
+  }
   .sec-10-img img {
     width: 100%;
   }
   .section-11 {
-    flex-direction: column;
+    flex-direction: column;align-items: center
   }
   .sec-11-second {
     padding-top: 30px;
   }
+  /* .active .custom-qualification {
+    border: none!important
+   } */
   .logos {
     flex-direction: column;
   }
@@ -356,7 +373,7 @@
   }
   .section-2-second {
     width: 100%;
-    padding: 0px 10px 0px 10px;
+    padding: 20px 10px 20px 10px;
   }
   .sec-2-img {
     width: 100%;
@@ -480,13 +497,16 @@
   }
   .sec-10-second {
     width: 100%;
-    padding: 50px 10px 30px;
+    padding: 40px 10px 40px 10px;
   }
   .sec-10-img {
     width: 100%;
   }
   .sec-10-img img {
-    width: 50%;
+    width: 100%;
+  }
+  .sec-10-image-container{
+    width: 50%
   }
   .section-11 {
     align-items: flex-start;
@@ -555,8 +575,15 @@
     .section-2-second{
         padding-left: 100px
     }
+    .sec-10-second {
+      width: 100%;
+      padding:100px 20px 100px 140px;
+    }
     .section-13 h2::after{
         display: none
+    }
+    .sec-10-img img {
+      width: 100%;
     }
 
 }
@@ -569,4 +596,26 @@
 .sec-8-box-1, .sec-8-box {
     width: 260px;
 }
+}
+@media(max-width:400px){
+  .foot-1 h3 {
+    font-size: 25px;
+}
+.sec-11-first {
+  width: 100%;
+}
+.sec-8-box-1, .sec-8-box {
+  width: 100%
+
+}
+.custom-carousel{
+  width: 100%!important
+}
+.owl-dot span{
+  width: 10px!important;height: 10px!important
+}
+.active span{
+  border: 1px solid #fff!important
+}
+
 }
