@@ -22,7 +22,10 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <!-- Link Owl Carousel JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -30,60 +33,68 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./logo.png" alt="logo" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <div class="overlay" id="overlay">
+                <div class="spinner"></div>
+              </div>
+        <nav class="navbar navbar-expand-lg" id="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="./logo.png" alt="logo" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                      <div class="icon-container">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                  </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active scrolled" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
+                        <a class="nav-link scrolled" href="#services">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
+                        <a class="nav-link scrolled" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inspire</a>
+                        <a class="nav-link scrolled" href="#inspire">Inspire</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link scrolled" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
+                        <a  class="nav-link scrolled" href="#news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a  class="nav-link scrolled" href="#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Skills</a>
+                        <a  class="nav-link scrolled" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Teams</a>
+                        <a  class="nav-link scrolled" href="#teams">Teams</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cilent</a>
+                        <a class="nav-link  scrolled" href="#clients">Cilent</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a  class="nav-link scrolled" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+   
     <div class="my-container">
-        <div class="hero-section">
+        <div class="hero-section my-container" id="home">
             <img src="./hello-2b3b2453.png" alt="hello-text" />
             <h1>We Craft Awesome Web And Graphic Design Solutions</h1>
         </div>
     </div>
 
-    <div class="section-1">
+    <div class="section-1 my-container" id="services" >
         <div class="section-1-first">
             <img src="./section-img's.png" alt="logo"> <br>
             <h2 class="forlargescreen">
@@ -149,7 +160,7 @@
                 </div>
             </div>
             <div class="sec-second-content content-2">
-                <div class="portimg-1 styletoinline">
+                <div class="portimg-1">
                     <img class="portimg-1" src="./portfolimg-5.png" alt="Portfolio" />
                 </div>
                 <div class="box-1">
@@ -160,7 +171,7 @@
                         Amet vel est sem integer suscipit enim quis dolor.
                     </h4>
                 </div>
-                <div class="styletoinline">
+                <div>
                     <img class="portimg-1" src="./portfolimg-6.png" alt="Portfolio" />
                 </div>
                 <div class="box-1">
@@ -175,7 +186,7 @@
         </div>
     </div>
 
-    <div class="section-2">
+    <div class="section-2  my-container" id="portfolio">
         <div class="section-2-first">
             <img src="./section-img-2.png" alt="imageofdailyroutineuseitems" /> <br>
             <h2 class="forlargescreen">
@@ -242,7 +253,7 @@
 
         </div>
     </div>
-    <div class="section-3 owl-carousel owl-theme">
+    <div class="section-3 owl-carousel owl-theme my-container" id="inspire">
         <div class="item"><img src="./img_01-4f763d77.png" alt="Image 1"></div>
         <div class="item"><img src="./portimage.png" alt="Image 2"></div>
         <div class="item"><img src="portimg.png" alt="Image 3"></div>
@@ -251,7 +262,7 @@
     <!-- <div class="section-3">
         <img src="./img_01-4f763d77.png" alt="" />
     </div> -->
-    <div class="section-5">
+    <div class="section-5 my-container" id="about">
         <div class="sec-5-first">
             <h3>
                 Two ghostly white figures in coveralls and helmets are soflty dancing. Shores of the cosmic ocean permanence of the stars.
@@ -288,7 +299,7 @@
         </div>
     </div>
 
-    <div class="section-6">
+    <div class="section-6 my-container" id="news">
         <div class="sec-6-first">
             <div class="parent-sec-6">
                 <div class="sec-6-content">
@@ -300,7 +311,7 @@
                         Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
                     </h6>
                 </div>
-                <div class="sec-6-content">
+                <div class="sec-6-content"  >
                     <h4>
                         January 25, 2024 UNCATEGORIZED
                     </h4>
@@ -311,7 +322,7 @@
                 </div>
             </div>
             <div class="parent-sec-6 ">
-                <div class="sec-6-content">
+                <div class="sec-6-content" >
                     <h4>
                         January 26, 2024 UNCATEGORIZED
                     </h4>
@@ -320,7 +331,7 @@
                         Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
                     </h6>
                 </div>
-                <div class="sec-6-content">
+                <div class="sec-6-content" >
                     <h4>
                         January 27, 2024 UNCATEGORIZED
                     </h4>
@@ -331,7 +342,7 @@
                 </div>
             </div>
             <div class="parent-sec-6">
-                <div class="sec-6-content">
+                <div class="sec-6-content" >
                     <h4>
                         January 23, 2024 UNCATEGORIZED
                     </h4>
@@ -340,7 +351,7 @@
                         Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
                     </h6>
                 </div>
-                <div class="sec-6-content">
+                <div class="sec-6-content" >
                     <h4>
                         January 22, 2024 UNCATEGORIZED
                     </h4>
@@ -377,7 +388,7 @@
             </div>
         </div>
 
-        <div class="section-8">
+        <div class="section-8 my-container" id="pricing">
             <div>
                 <div class="sec-8-box" style="background: #de8234">
                     <h5>Basic</h5>
@@ -426,7 +437,7 @@
         </div>
     </div>
     </div>
-    <div class="section-9">
+    <div class="section-9 my-container" id="skills">
         <div class="sec-9-first">
             <img src="./section-img-2.png" alt="Skills"> <br>
             <h2 class="forlargescreen">
@@ -480,7 +491,7 @@
 
     </div>
 
-    <div class="section-10">
+    <div class="section-10 my-container" id="teams">
         <div class="sec-10-first">
             <img src="./section-img-2.png" alt="logo"> <br>
             <h2 class="forlargescreen">
@@ -558,8 +569,8 @@
         </div>
     </div>
    
-    <div class="section-11">
-        <div class="custom-carousel owl-carousel owl-theme" style="width: 340px">
+    <div class="section-11 my-container" id="clients">
+        <div class="custom-carousel owl-carousel owl-theme" style="width: 340px"  id="movingElement">
             <div class="custom-item">  
                 <p>
                    
@@ -603,7 +614,7 @@ Globular star cluster, another world brain is the seed of intelligence a billion
         </div>
 
         <div class="sec-11-second">
-            <div class="logos">
+            <div class="logos" >
                 <img src="./footlogo.png" alt="logo">
                 <img src="./footlogo-2.png" alt="logo">
             </div>
@@ -618,7 +629,7 @@ Globular star cluster, another world brain is the seed of intelligence a billion
         </div>
     </div>
 
-    <div class="section-12">
+    <div class="section-12 my-container" id="contact">
         <div class="sec-12-first">
             <img src="./section-img's.png" alt="logo"><br />
             <h2 class="forlargescreen">

@@ -68,7 +68,61 @@ body {
   --leftspace: 50px;
   --leftspace2: 100px;
 }
+ .spinner-shown body {
+  background-color: red;
+}
 
+
+#movingElement {
+  position: relative;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#f0b40e; 
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000; /* Ensure it appears above other content */
+  transition: all 2s ease-in
+}
+
+/* Style for the spinner */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animation to rotate the spinner */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
 .forsmallscreen {
   display: none;
 }
@@ -78,10 +132,10 @@ body {
 .navbar {
   background-color: #000 !important;
   height: 70px;
-  /* position: fixed !important; */
   top: 0px;
   left: 0px;
   width: 100% !important;
+  z-index: 999999;
 }
 
 .navbar-brand{
@@ -95,12 +149,69 @@ body {
   line-height: 20px;
   background: transparent;
 }
+.navbar-toggler{
+  padding: 10px 12px!important
+}
+.navbar-toggler:focus{
+  box-shadow: none!important;border: none!important;outline: none!important
+}
+
+.rotate:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.rotate:nth-child(2) {
+  opacity: 0;
+}
+
+.rotate:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar-toggler {
+  cursor: pointer;
+}
+.navbar-nav {
+  margin-left: auto!important
+}
+
+/* Additional styling for the spans */
+.icon-container span {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  margin-bottom: 1px;
+  transition: all 0.3s ease;
+  width: 20px;
+}
 .nav-link:hover {
   color: #ff1e5e !important;
 }
-.navbar-toggler {
-  background: #fff !important;
+.navbar-toggler{
+  position: relative;z-index: 9999999999;
 }
+.navbar-toggler div{
+  display: flex;gap: 5px;flex-direction: column
+}
+.navbar-toggler div span {
+  width: 20px;height: 2px ;background : #fff
+}
+
+.navbar.fixed-top {
+  background-color: #333;
+  transition: top 0.3s;
+}
+
+.collapsing{
+  transition: all 0s ease!important
+}
+
 
 .hero-section {
   background-image: url(./hero_main-4fc3d850.jpg);
@@ -899,4 +1010,7 @@ footer {
 }
 .foot-4 {
   padding-top: 50px;
+}
+.active {
+  color:#ff1e5e !important; /* Change to desired color */
 }
