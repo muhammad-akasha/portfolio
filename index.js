@@ -1,139 +1,152 @@
-
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000, // 5 seconds
-    autoplayHoverPause: true,
-    nav: true,
-    dots: true,
-   
-  });
-});
-
-
-$(document).ready(function(){
-  $('.custom-carousel').owlCarousel({
-      items: 1, // Display only one item at a time
-      loop: true, // Infinite loop
-      margin: 10, // Margin between items (adjust as needed)
-      autoplay: true, // Autoplay enabled
-      autoplayTimeout: 3000, // Autoplay interval in milliseconds
-      autoplayHoverPause: true,// Pause autoplay on mouse hover
-  });
-});
-
-var navbar = document.getElementById("navbar");
-
-// Listen for the scroll event on the window
-window.addEventListener("scroll", function() {
-  // Check if the scroll position is greater than 180px
-  if (window.scrollY > 180) {
+document.addEventListener("DOMContentLoaded", function() {
+  var loadingScreen = document.getElementById("loading-screen");
   
-    navbar.style.setProperty("background-color", "#000" , "important");
-    navbar.style.setProperty("transition", "all 2s ease " , "important");
-    navbar.style.setProperty("position" , "fixed " ,  "important");
-    navbar.classList.add("fadeInDown");
-   
-  } else {
-    navbar.style.position = "relative";
-    navbar.style.background = "#000"
-    navbar.classList.remove("fadeInDown");
-  }
-});
-
-$(document).ready(function(){
-  // Close navbar collapse on click outside
-  $(document).click(function(event) {
-    var clickover = $(event.target);
-    var $navbar = $(".navbar-collapse");               
-    var _opened = $navbar.hasClass("show");
-    if (_opened === true && !clickover.hasClass("navbar-toggler")) {      
-      $navbar.collapse('hide');
-      // Remove rotate class on navbar toggler spans
-      $(".navbar-toggler .icon-container span").removeClass("rotate");
-    }
-  });
-
-  // Close navbar collapse on scroll
-  $(window).scroll(function() {
-    var $navbar = $(".navbar-collapse");               
-    var _opened = $navbar.hasClass("show");
-    if (_opened === true) {      
-      $navbar.collapse('hide');
-      // Remove rotate class on navbar toggler spans
-      $(".navbar-toggler .icon-container span").removeClass("rotate");
-    }
-  });
-
-  // Close navbar collapse on navbar toggler click
-  $(".navbar-toggler").click(function(event) {
-    var $navbar = $(".navbar-collapse");               
-    var _opened = $navbar.hasClass("show");
-    if (_opened === true) {      
-      $navbar.collapse('hide');
-    }
-    // Toggle rotate class on navbar toggler spans
-    $(".navbar-toggler .icon-container span").toggleClass("rotate");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Hide the navbar-collapse initially
-  var navbarCollapse = document.getElementById('navbarSupportedContent');
-  navbarCollapse.classList.remove('open');
-
-  // Get the navbar toggler button and the spans inside it
-  var navbarToggler = document.querySelector(".navbar-toggler");
-  var iconSpans = navbarToggler.querySelectorAll(".icon-container span");
-
-  // Function to toggle the rotate class on spans
-  function toggleRotate() {
-    iconSpans.forEach(function(span) {
-      span.classList.toggle("rotate");
-    });
-  }
-
-  // Function to toggle navbar-collapse
-  function toggleNavbar() {
-    navbarCollapse.classList.toggle('open');
-    toggleRotate(); // Call toggleRotate() here
-  }
-
-  // Event listener for clicks on navbar toggler
-  navbarToggler.addEventListener('click', function() {
-    toggleNavbar();
-    // Call toggleRotate() here to add/remove rotate class
-    toggleRotate();
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Add a delay of 3 seconds before hiding the overlay
   setTimeout(function() {
-    var overlay = document.getElementById("overlay");
-    overlay.style.display = "none";
-    document.body.classList.add("spinner-shown");
-  }, 1500); // Change the delay to 3000 milliseconds (3 seconds)
+    loadingScreen.style.backgroundColor = "#145122"; // Change color to green after 3 seconds
+    setTimeout(function() {
+      loadingScreen.style.display = "none"; // Hide loading screen after another 3 seconds
+    }, 3500); // 3000 milliseconds = 3 seconds
+  }, 0); // 3000 milliseconds = 3 seconds
+});
+
+
+
+const navbarToggle = document.getElementById('navbar-toggle');
+const navbarCollapse = document.getElementById('navbarSupportedContent');
+
+navbarToggle.addEventListener('click', () => {
+  navbarCollapse.classList.toggle('show');
+});
+
+document.addEventListener('click', (event) => {
+  if (!navbarCollapse.contains(event.target) && event.target !== navbarToggle) {
+    navbarCollapse.classList.remove('show');
+  }
+});
+
+window.addEventListener('scroll', () => {
+  if (navbarCollapse.classList.contains('show')) {
+    navbarCollapse.classList.remove('show');
+  }
+});
+
+
+
+
+const texts = ["feelings", "future", "life"];
+const textContainer = document.getElementById("texttype");
+const blinkingLine = document.getElementById("blinking-line");
+let index = 0;
+let charIndex = 0;
+
+function typeText() {
+  textContainer.textContent = texts[index].substring(0, charIndex++);
+  if (charIndex > texts[index].length) {
+    charIndex = 0;
+    index = (index + 1) % texts.length;
+    setTimeout(typeText, 3500); // Adjust typing speed (milliseconds)
+  } else {
+    setTimeout(typeText, 100); // Adjust typing speed (milliseconds)
+  }
+}
+
+typeText();
+
+window.addEventListener("load", function() {
+  let navbar = document.querySelector(".navbar"); // Assuming the navbar has the class "navbar"
+  navbar.style.setProperty("background-color", "transparent", "important");
 });
 
 window.addEventListener("scroll", function() {
-  var containers = document.querySelectorAll(".my-container");
-  var navLinks = document.querySelectorAll(".nav-link");
-  var scrollPosition = window.scrollY;
+  let navbar = document.querySelector(".navbar"); // Assuming the navbar has the class "navbar"
 
-  // Iterate over each container
-  containers.forEach(function(container, index) {
-    // Check if the scroll position is above the current container
-    if (scrollPosition >= container.offsetTop) {
-      // Remove 'active' class from all nav links
-      navLinks.forEach(function(link) {
-        link.classList.remove("active");
-      });
-      // Add 'active' class to the corresponding nav link
-      navLinks[index].classList.add("active");
+  if (window.scrollY >= 130) {
+    navbar.style.setProperty("background-color", "white", "important");
+    navbar.style.setProperty("color", "white", "important");
+    navbar.style.position = "fixed";
+    navbar.style.width = "100%";
+    navbar.style.transition = "all ease-in-out 0.2s";
+    navbar.style.zIndex = "1000000";
+    navbar.classList.add("fadeInDown");
+
+  } else {
+    navbar.style.setProperty("background-color", "transparent", "important");
+    navbar.style.setProperty("color", "white", "important");
+    navbar.style.position = "relative";
+    navbar.classList.remove("fadeInDown");
+
+  }
+});
+
+// Function to update navigation link colors based on scroll position
+function updateNavLinksColor() {
+  var navlinks = document.querySelectorAll(".nav-link");
+  navlinks.forEach(function(navlink) {
+    if (window.scrollY >= 130) {
+      navlink.style.setProperty("color", "black", "important");
+    } else {
+      navlink.style.setProperty("color", "white", "important");
+    }
+  });
+}
+
+// Call the function when the page loads
+window.addEventListener("load", function() {
+  updateNavLinksColor();
+});
+
+// Call the function when the window is scrolled
+window.addEventListener("scroll", function() {
+  updateNavLinksColor();
+});
+
+// Function to set initial state of logos
+function setInitialLogoState() {
+  let firstlogo = document.getElementById("firstlogo");
+  let secondlogo = document.getElementById("secondlogo");
+  // Ensure only first logo is displayed and others are hidden
+  firstlogo.style.display = "unset";
+  secondlogo.style.display = "none";
+}
+
+// Call the function to set the initial state of logos when the page loads
+window.addEventListener("load", setInitialLogoState);
+
+window.addEventListener("scroll", function() {
+  let firstlogo = document.getElementById("firstlogo"); // white
+  let secondlogo = document.getElementById("secondlogo"); // black
+
+  if (window.scrollY < 130) {
+    firstlogo.style.display = "unset";
+    secondlogo.style.display = "none";
+  } else {
+    firstlogo.style.display = "none";
+    secondlogo.style.display = "unset";
+    secondlogo.style.color = "black";
+    secondlogo.style.width = "165px";
+  }
+});
+
+// Select all elements with the class .nav-link
+const navLinks = document.querySelectorAll(".nav-link");
+
+// Loop through each .nav-link element
+navLinks.forEach((link) => {
+  // Add event listener for mouseenter
+  link.addEventListener("mouseenter", function() {
+    // Apply hover effect (change color to red)
+    link.style.color = "red";
+  });
+
+  // Add event listener for mouseleave
+  link.addEventListener("mouseleave", function() {
+    // Revert to original color
+    if (scrollY >= 130) {
+      link.style.color = "black";
+    } // Reverts to default or whatever is set in CSS
+    else {
+      link.style.color = "white";
     }
   });
 });
+

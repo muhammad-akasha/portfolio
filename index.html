@@ -1,717 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/005ad9d070.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="media.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/005ad9d070.js" crossorigin="anonymous"></script>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-      <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- Link Owl Carousel JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-</head>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
-<body>
-        <div class="overlay" id="overlay">
-                <div class="spinner"></div>
-              </div>
-        <nav class="navbar navbar-expand-lg" id="navbar">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="./logo.png" alt="logo" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
-                      <div class="icon-container">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                  </button>
+  <link rel="stylesheet" href="media.css">
+  </head>
+  <body>
+      <div id="loading-screen">
+          <div class="spinner"></div>
+        </div>
+    
+      <div class="wrapper">
+     
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img id="firstlogo" src="./logo transparent.webp" alt=""><img  id="secondlogo" src="./BB_black-e1634464384311.webp" alt=""></a>
+            <button id="navbar-toggle"
+              class="navbar-toggler toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active scrolled" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scrolled" href="#services">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scrolled" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scrolled" href="#inspire">Inspire</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scrolled" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a  class="nav-link scrolled" href="#news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a  class="nav-link scrolled" href="#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a  class="nav-link scrolled" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a  class="nav-link scrolled" href="#teams">Teams</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  scrolled" href="#clients">Cilent</a>
-                    </li>
-                    <li class="nav-item">
-                        <a  class="nav-link scrolled" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-   
-    <div class="my-container">
-        <div class="hero-section my-container" id="home">
-            <img src="./hello-2b3b2453.png" alt="hello-text" />
-            <h1>We Craft Awesome Web And Graphic Design Solutions</h1>
-        </div>
-    </div>
-
-    <div class="section-1 my-container" id="services" >
-        <div class="section-1-first">
-            <img src="./section-img's.png" alt="logo"> <br>
-            <h2 class="forlargescreen">
-                WHAT <br /> WE <br /> DO
-            </h2>
-            <h2 class="forsmallscreen">
-                WHAT WE DO
-            </h2>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    >Hypno-transformation method HTM™</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Workshops and lectures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">about me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#">blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#">contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#">EN</a>
+                </li>
+              
+                
+              </ul>
+             
+            </div> <li class="nav-last">
+                      <i class="fa-solid fa-cart-shopping nav-link"></i>
+              </li>
+              
+          </div>
+        </nav>
+       
+      <div class="wrapper-text animate__animated animate__fadeInUp animate__slow">
             <h3>
-                Our modest <br /> list of services
-            </h3>
-        </div>
-        <div class="section-1-second">
-            <h2>
-                Our modest list of services to <br /> suit all your digital needs
-            </h2>
-            <div class="sec-second-content">
-                <div class="portimg-1">
-                    <img class="portimg-1" src="./portfolimg-1.png" alt="portfolimg-1" />
-                </div>
-                <div class="box-1">
-                    <h3>
-                        Preciese
-                    </h3>
-                    <h4>
-                        Phasellus vel est sem integer suscipit enim quis dictum.
-                    </h4>
-                </div>
-                <div class="portimg-1">
-                    <img class="portimg-1" src="./portfolimg-2.png" alt="portfolimg-2" />
-                </div>
-                <div class="box-1">
-                    <h3>
-                        Support
-                    </h3>
-                    <h4>
-                        Est sem integer suscipit enim quis dictum feugiat curabitur.
-                    </h4>
-                </div>
-            </div>
-            <div class="sec-second-content content-2">
-                <div class="portimg-1">
-                    <img class="portimg-1" src="./portfolimg-3.png" alt="Portfolio" />
-                </div>
-                <div class="box-1">
-                    <h3>
-                        Responsive
-                    </h3>
-                    <h4>
-                        Donec vel est sem integer suscipit enim quis lorem.
-                    </h4>
-                </div>
-                <div class="styletoinline">
-                    <img class="portimg-1" src="./portfolimg-4.png" alt="Portfolio" />
-                </div>
-                <div class="box-1">
-                    <h3>
-                        Community
-                    </h3>
-                    <h4>
-                        Lorem integer suscipit enim quis dictum feugiat donec.
-                    </h4>
-                </div>
-            </div>
-            <div class="sec-second-content content-2">
-                <div class="portimg-1">
-                    <img class="portimg-1" src="./portfolimg-5.png" alt="Portfolio" />
-                </div>
-                <div class="box-1">
-                    <h3>
-                        Portfolio
-                    </h3>
-                    <h4>
-                        Amet vel est sem integer suscipit enim quis dolor.
-                    </h4>
-                </div>
-                <div>
-                    <img class="portimg-1" src="./portfolimg-6.png" alt="Portfolio" />
-                </div>
-                <div class="box-1">
-                    <h3>
-                        Store
-                    </h3>
-                    <h4>
-                        Sem integer suscipit enim quis dictum feugiat suscipit.
-                    </h4>
-                </div>
-            </div>
-        </div>
+                
+            WELCOME, MY NAME IS BRIGITA BRAČKO,</h3>
+         <h2><span> Transform your</span> <b id="texttype"> </b> <span class="animate__animated animate__flash animate__infinite" id="blinking-line">|</span>  with the unique method of Hypno-transformation therapy HTM™F</h2>   
+        <div class="wrapper-buttons">
+         <div class="button">
+             FREE CONSULTATION 
+         </div>   
+         <div class="text-vid">
+             VIDEO
+         </div>  
+        </div>                       
+       </div>
+    </div>
+  
+
+    <div class="section-1">
+        <h4>THERE’S A REASON FOR EVERYTHING</h4>
+        <h2>4 steps to transformation</h2>
+        <p>Only by revealing the source of our struggles and understanding the destructive patterns that are rooted deep within our subconscious can we permanently break the vicious cycle toxic beliefs that hold us back from transforming our lives for the better.</p>
+       
     </div>
 
-    <div class="section-2  my-container" id="portfolio">
-        <div class="section-2-first">
-            <img src="./section-img-2.png" alt="imageofdailyroutineuseitems" /> <br>
-            <h2 class="forlargescreen">
-                PORT <br /> FO <br /> LIO
-            </h2>
-            <h2 class="forsmallscreen">
-                PORTFOLIO
-            </h2>
-            <h3>
-                Check Our <br /> Recent Work
-            </h3>
+    <div class="section-box-parect container-fluid">
+        <div class="row  animate__animated animate__fadeInLeft ">
+        <div class="section-1-box col " style="background: #90a882">
+               <h2>01</h2> 
+               <h3> Find the source of your struggles</h3>
+              <p>  The remarkable Hypno-transformation method HTM™ helps us discover the true origin of our underlying issues. In a state of hypnosis we are able to discover those events and ideas about ourselves that have helped shape our destructive unconscious beliefs and mental patterns.</p>
+              <div class="button-1">
+                    Read more
+                </div>
         </div>
-        <div class="section-2-second">
-            <div class="img-container">
-                <div class="sec-2-image">
-                    <img class="sec-2-img" src="./img_01s-da7506ed.jpg" alt="portimg-1" />
-                    <div class="overlay overlay-2nd">
-                        <h5>Smartphone</h5>
-
-                        <p>BUSINESS CARDS</p>
-                    </div>
+        <div class="section-1-box col" style="background: #6a7d55">
+                <h2>02</h2> 
+                <h3> Interpretation of ideas and patterns</h3>
+               <p> In a state of hypnosis we utilize a variety of techniques to interpret the meaning of our ingrained negative thought patterns and beliefs. This is where the infamous “Aha!” moment occurs as we begin to understand how our subconscious ideas affect our lives and generate problematic behaviours and actions.</p>
+               <div class="button-3">
+                   Free Consultation
+               </div>
+         </div>
+         <div class="section-1-box col" style="background: #40642d">
+                <h2>03</h2> 
+                <h3>Breaking destructive patterns</h3>
+               <p> With the help of so-called interruptive techniques we are able to influence destructive thought patterns, remove them and replace them with new, supporting mental structures that are the basis for any emotional changes, which are necessary for taking action towards improving the quality of our life.</p>
+               <div class="button-1">
+                    Read more
                 </div>
-            </div>
-            <div class="d-flex">
-                <div class="sec-2-img-2">
-                    <div class="img-container">
-                        <div> <img class="sec-2-img" src="./img_02s-0ac6c0d7.jpg" alt="portimg-2" /></div>
-                        <div class="overlay overlay-2nd">
-                            <h5>At Work</h5>
-
-                            <p>PSD MOCKUP</p>
-                        </div>
+         </div>
+         <div class="section-1-box col" style="background: #144215">
+                <h2>04</h2> 
+                <h3> Programming positive patterns and ideas</h3> 
+                <p>The Hypno-transformation method is a 3-week practice of self-hypnotic personalized daily recordings, which will help you reinforce new ideas that will affect your well-being and the actions you can take towards living your life according to your most authentic inner wishes and desires.</p>
+                <div class="button-3">
+                        Free Consultation
                     </div>
-                    <div class="img-container">
-                        <div> <img class="sec-2-img" src="./img_11s-5f19228b.jpg" alt="portimg-3" /></div>
-                        <div class="overlay overlay-2nd">
-                            <h5>Design</h5>
-
-                            <p>SKYSCRAPER</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sec-2-img-3">
-                    <div class="img-container">
-                        <div> <img class="sec-2-img" src="./img_10s-e44ef081.jpg" alt="portimg-4"></div>
-                        <div class="overlay overlay-2nd">
-                            <h5>Carbon Bike</h5>
-
-                            <p>ULTRAFAST</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="sec-2-img-4 img-container">
-                <div>
-                    <img class="sec-2-img" src="./img_12s-3df03420.jpg" alt="shoesimg" /></div>
-                <div class="overlay overlay-2nd">
-                    <h5>A4 Paper</h5>
-
-                    <p>PSD MOCKUP</p>
-                </div>
-            </div>
-
-        </div>
+         </div>
     </div>
-    <div class="section-3 owl-carousel owl-theme my-container" id="inspire">
-        <div class="item"><img src="./img_01-4f763d77.png" alt="Image 1"></div>
-        <div class="item"><img src="./portimage.png" alt="Image 2"></div>
-        <div class="item"><img src="portimg.png" alt="Image 3"></div>
+</div>
+
+<div class="section-1 sec-1-2 animate__animated animate__fadeInUp">
+        <h4>THE TIME FOR CHANGE IS NOW</h4>
+        <h2>I can help you</h2>
+        <p>Until we understand the subconscious sources of the issues we struggle with, we are unable to take a step forward towards improving our emotional and mental states. In addition to one-on-one hypnosis, group workshops are also available for smaller closed groups, while interactive lectures are aimed at larger groups.</p>
+       
+    </div>
+
+    <div class="flip-parent section-2-parent animate__animated animate__fadeInLeft">
+      <div class="flip-box">
+          <div class="flip-box-inner">
+              <div class="flip-box-front section-2 firstimg">
+                <h2>hypnosis</h2>
+              </div>
+              <div class="flip-box-back flip-backimg-1">
+                <h2>Our well-being is dictated by subconscious thought patterns</h2>
+                <div class = "fiip-back-btn1 box-back-hover">
+                  Free Consultation
+                </div>
+              </div>
+          </div>
       </div>
-      
-    <!-- <div class="section-3">
-        <img src="./img_01-4f763d77.png" alt="" />
-    </div> -->
-    <div class="section-5 my-container" id="about">
-        <div class="sec-5-first">
-            <h3>
-                Two ghostly white figures in coveralls and helmets are soflty dancing. Shores of the cosmic ocean permanence of the stars.
-            </h3>
-            <img class="sec-5img" src="./video_img-0bcbaeb2.jpg" alt="" />
-            <div class="sec-5-para">
-                <div class="para-1">
-                    <p>
-                        As a patch of light. Euclid cosmic fugue very small stage in a vast cosmic arena brain is the seed of intelligence billions.
-                    </p>
-                    <p>
-                        Flatland! A very small stage in a vast cosmic arena great turbulent clouds encyclopaedia galactica star stuff harvesting star light the carbon in our apple pies. Realm of the galaxies, Cambrian explosion Flatland for tesserac
-                    </p>
-                </div>
-                <div class="para-2">
-                    <p>
-                        A very small stage in a vast cosmic arena great turbulent clouds encyclopaedia galactica star stuff harvesting star light the carbon in our apple pies. Realm of the galaxies, Cambrian explosion Flatland for tesseract hundreds of thousands, cosmic ocean.
-                        Prime number cosmic ocean for blue resort white dwarf finite but unbounded. A very small stage in a vast cosmic arena great turbulent clouds encyclopaedia galactica star stuff harvesting star light the carbon
-                    </p>
-                </div>
+      <div class="flip-box">
+          <div class="flip-box-inner">
+              <div class="flip-box-front section-2 secondimg">
+                <h2>  Workshops and lectures</h2>
+              </div>
+              <div class="flip-box-back flip-backimg-2">
+                  <h2>Employee well-being is the key to success</h2>
+                  <div class = "fiip-back-btn2 box-back-hover">
+                   I Want To Know More
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="flip-box">
+          <div class="flip-box-inner">
+              <div class="flip-box-front section-2 thirdimg">
+                <h2>Online Courses</h2>
+              </div>
+              <div class="flip-box-back flip-backimg-3 section-2">
+                  <h2>Video and audio content library</h2>
+                  <div class = "fiip-back-btn3 box-back-hover">
+                  Coming Soon
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="section-3 animate__animated animate__fadeInUp">
+        <div class="section-3-content">
+            <h5>WANT TO LEARN MORE?</h5>
+            <h4>Are you determined to solve your problems, but you’re not sure if the hypno-transformation method HTM™ is the right solution for you? Then I invite you to an introductory call with me where I can answer all your questions. Choose a date that suits you and let’s connect.</h4>
+            <div class="button-4">
+                Free call
             </div>
-        </div>
-        <div class="sec-5-second">
-            <img src="./section-img-3.png" alt="logo" /> <br>
-            <h2 class="forlargescreen">
-                WHO <br /> WE <br /> ARE
-            </h2>
-            <h2 class="forsmallscreen">
-                WHO WE ARE
-            </h2>
-            <h3>
-                About Our Small <br /> Company
-            </h3>
         </div>
     </div>
 
-    <div class="section-6 my-container" id="news">
-        <div class="sec-6-first">
-            <div class="parent-sec-6">
-                <div class="sec-6-content">
-                    <h4>
-                        January 27, 2024 UNCATEGORIZED
-                    </h4>
-                    <h3>Globular star cluster radio scope great turbulent</h3>
-                    <h6>
-                        Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
-                    </h6>
-                </div>
-                <div class="sec-6-content"  >
-                    <h4>
-                        January 25, 2024 UNCATEGORIZED
-                    </h4>
-                    <h3>Globular star cluster radio scope great turbulent</h3>
-                    <h6>
-                        Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
-                    </h6>
-                </div>
-            </div>
-            <div class="parent-sec-6 ">
-                <div class="sec-6-content" >
-                    <h4>
-                        January 26, 2024 UNCATEGORIZED
-                    </h4>
-                    <h3>Muse about a very small stage in a vast arena</h3>
-                    <h6>
-                        Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
-                    </h6>
-                </div>
-                <div class="sec-6-content" >
-                    <h4>
-                        January 27, 2024 UNCATEGORIZED
-                    </h4>
-                    <h3>Are creatures of the vast cosmos of global death</h3>
-                    <h6>
-                        Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
-                    </h6>
-                </div>
-            </div>
-            <div class="parent-sec-6">
-                <div class="sec-6-content" >
-                    <h4>
-                        January 23, 2024 UNCATEGORIZED
-                    </h4>
-                    <h3>Kindling the energy hidden in matter vanquish now</h3>
-                    <h6>
-                        Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
-                    </h6>
-                </div>
-                <div class="sec-6-content" >
-                    <h4>
-                        January 22, 2024 UNCATEGORIZED
-                    </h4>
-                    <h3>Galaxyrise great turbulent clouds colonies</h3>
-                    <h6>
-                        Intelligent beings. Rogue Jean-Francois Champollion. Hearts of the stars venture, hydrogen atoms cosmic fugue across ...
-                    </h6>
-                </div>
+<div class="container-fluid py-5 " style="background:#f9f9f9">
+    <div class="section-4  animate__animated animate__fadeInUp">
+        <h6>MY STORY</h6>
+        <h3>The functioning of the brain and that illusive, mysterious quality of the mind that is hidden from plain sight has always attracted me.
+            </h3>
+    </div>
+    <div class="section-5  animate__animated animate__fadeInUp">
+        <div class="sec-5-content  col-lg-4">
+            <p>I graduated from the UK College of Hypnosis and Hypnotherapy with a degree in Cognitive Behavioral Hypnotherapy. I deepened my knowledge of hypnotherapy by becoming a licensed RTT therapist (Rapid Transformational Therapy) under the guidance of Marisa Peer. I am registered at The General Hypnotherapy Standards Council (GHSC) and General Hypnotherapy Register (GHR).</p>
+            <p>Since hypnotherapy is a combination of different approaches, I sought additional knowledge and training in the field of mindfulness practices under the guidance of Sean Fargo by attending his Mindfulness Exercises school. In addition, I have also been a yoga teacher with an international license for RYU 300 for many years now. With the help of exceptional mentors I learned what our minds are truly capable of and what miraculous changes can make when we are ready to tackle breaking outdated thought patterns and establishing new, healthy mental connections.</p>
+            <div class="button-4 button-5">
+                READ MORE 
             </div>
         </div>
-        <div class="sec-6-second">
-            <img src="./section-img-3.png" alt="logo" /> <br>
-            <h2 class="forlargescreen">
-                BL <br /> OG
-            </h2>
-            <h2 class="forsmallscreen">BLOG</h2>
-            <h3>
-                About Our Small <br /> Company
+        <div class="sec-5-img col-lg-6">
+            
+        </div>
+    </div>
+    <div class="sec-5-heading animate__animated animate__fadeInUp">
+        <h6>MY MISSION AND INTENTION
+        </h6> <div class="line"></div>
+        <h3>Just a thought away from feeling better!
             </h3>
         </div>
+        <div class="sec-5-para">
+            <p>I firmly believe that everyone deserves to live a happy, healthy and pleasant life. The good news is, this is accessible to anyone and everyone at any given moment and is literally just a thought away. Overcoming daily challenges is a part of both my life and your own. However, sometimes certain repeating thoughts, high levels of stress in our lives and self-destructive habits can lead us down a road we do not want to travel. I have helped many of my clients - both on a local and on an international level - to embark on a self-empowering journey towards creating a more peaceful life, and setting clear goals without having to carry around the burdens of the past. I am certain I can help you too.</p>
     </div>
+</div>
 
-    <div class="section-7">
-        <div class="sec-7-para">
-            <div>
-                <p>
-                    Terre estere doloremique sei totames laudantium remeseo aperiam, eaque ipsa quae ab illo inventore veritatis
-                </p>
-            </div>
-            <div>
-                <p>
-                    Dolor lorem ipsu seti per se neque porro quisquam est, quister set dolorem per sei donec nulla est rete et quasi architecto beataes vitae dicta sunt
-                </p>
-            </div>
-        </div>
-
-        <div class="section-8 my-container" id="pricing">
-            <div>
-                <div class="sec-8-box" style="background: #de8234">
-                    <h5>Basic</h5>
-                </div>
-                <div class="sec-8-box-1">
-                    <h2>$29</h2>
-                    <h6>Per month</h6>
-                    <p>
-                        25 GB Storage <br /> 24/7 Support <br /> Up to 50 Users <br /> Donec Estu <br /> Lorem Ipsum
-                    </p>
-                    <div class="sec-8-button">
-                        Choose
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="sec-8-box" style="background: #505cc1">
-                    <h5>Basic</h5>
-                </div>
-                <div class="sec-8-box-1">
-                    <h2>$29</h2>
-                    <h6>Per month</h6>
-                    <p>
-                        25 GB Storage <br /> 24/7 Support <br /> Up to 50 Users <br /> Donec Estu <br /> Lorem Ipsum
-                    </p>
-                    <div class="sec-8-button">
-                        Choose
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="sec-8-box" style="background-color:#37bd6c">
-                    <h5>Basic</h5>
-                </div>
-                <div class="sec-8-box-1">
-                    <h2>$29</h2>
-                    <h6>Per month</h6>
-                    <p>
-                        25 GB Storage <br /> 24/7 Support <br /> Up to 50 Users <br /> Donec Estu <br /> Lorem Ipsum
-                    </p>
-                    <div class="sec-8-button">
-                        Choose
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="section-6">
+    <div class="sec-6-content  animate__animated animate__fadeInUp">
+        <h6>STORIES OF SUCCESS</h6>
+        <h4>What do the people who have decided to work with me and change their lives for the better have to say?</h4>
     </div>
+</div>
+<div class="container-fluid">
+<div class="section-7 row">
+<div class="col-sm-12 col-md-8 col-lg-4 sec-7-content">
+    <h2>Daniel J.</h2>
+    <h3>PERSONAL TRAINER</h3>
+    <div>
+        <img src="./1-150x150.png.webp" alt="">
     </div>
-    <div class="section-9 my-container" id="skills">
-        <div class="sec-9-first">
-            <img src="./section-img-2.png" alt="Skills"> <br>
-            <h2 class="forlargescreen">
-                OUR <br /> SKI <br /> LLS
-            </h2>
-            <h2 class="forsmallscreen">
-                OUR SKILLS
-            </h2>
-            <h3>
-                Our Set Of <br /> Competence
-            </h3>
-        </div>
-        <div class="sec-9-second">
-            <h3> Ghostly white figures in coveralls and helmets are soflty dancing of the cosmic</h3>
-            <div class="sec-9-box">
-                <h2>
-                    75%
-                </h2>
-                <h4>
-                    Crea1tivity
-                </h4>
-            </div>
-            <div class="progress-container">
-                <progress value="75" max="100"></progress>
-            </div>
-            <div class="sec-9-box">
-                <h2>
-                    80%
-                </h2>
-                <h4>
-                    Design
-                </h4>
-            </div>
-
-            <div class="progress-container">
-                <progress value="80" max="100"></progress>
-            </div>
-
-            <div class="sec-9-box">
-                <h2>
-                    65%
-                </h2>
-                <h4>
-                    Marketing
-                </h4>
-            </div>
-            <div class="progress-container">
-                <progress value="65" max="100"></progress>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="section-10 my-container" id="teams">
-        <div class="sec-10-first">
-            <img src="./section-img-2.png" alt="logo"> <br>
-            <h2 class="forlargescreen">
-                MEET <br /> OUR <br /> TEAM
-            </h2>
-            <h2 class="forsmallscreen">
-                MEET OUR TEAM
-            </h2>
-            <h3>
-                Get to know us much <br /> better
-            </h3>
-        </div>
-        <div class="sec-10-second">
-            <div class="sec-10-img">
-                <div class="sec-10-image-container">
-                    <div>
-                        <img src="./team_01_large-1a2b5c89.jpg" alt="Teams">
-                    </div>
-
-                    <div class="overlay-2nd">
-                        <h5> Mark Stone
-
-                        </h5>
-
-                        <p> CEO </p>
-                    </div>
-                </div>
-                <div class="sec-10-image-container">
-                    <div> <img src="./sec-9.jpg" alt="Teams"></div>
-                    <div class="overlay-2nd">
-                        <h5> Kate Stonehold</h5>
-
-                        <p> DESIGNER</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-10-img">
-                <div class="sec-10-image-container">
-                    <div> <img src="./sec-9-2.jpg" alt="Teams"></div>
-                    <div class="overlay-2nd">
-                        <h5>Terry Jackobs</h5>
-
-                        <p> CODER</p>
-                    </div>
-                </div>
-                <div class="sec-10-image-container">
-                    <div> <img src="./sec-.jpg" alt="Teams"></div>
-                    <div class="overlay-2nd">
-                        <h5>Jane Perry</h5>
-                        <p>
-
-                            HR</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-10-img">
-                <div class="sec-10-image-container">
-                    <div> <img src="./sec9.jpg" alt="Teams"></div>
-                    <div class="overlay-2nd">
-                        <h5>Peter Williams</h5>
-
-                        <p> DESIGNER</p>
-                    </div>
-                </div>
-                <div class="sec-10-image-container">
-                    <div>
-
-                        <img src="./se.jpg" alt="Teams"> </div>
-                    <div class="overlay overlay-2nd">
-                        <h5>John Doe</h5>
-                        <p>MARKETING</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   
-    <div class="section-11 my-container" id="clients">
-        <div class="custom-carousel owl-carousel owl-theme" style="width: 340px"  id="movingElement">
-            <div class="custom-item">  
-                <p>
-                   
-A very small stage in a vast cosmic arena are creatures of the cosmos vanquish the impossible white dwarf astonishment. A still more glorious dawn awaits light.
-
-                </p>
-                <div class="custom-owl">
-                    <img class="custom-carousel-img" src="./carausel2.jpg" alt="Client">
-                    <div>
-                        <h5>Jane Williams
-                            </h5>
-                        <span class="custom-qualification"> DESIGNER</span>
-                    </div>
-                </div>
-            </div>
-            <div class="custom-item">  
-                <p>
-                    
-Globular star cluster, another world brain is the seed of intelligence a billion trillion bits of moving fluff hearts of the stars. Hypatia preserve and cherish that pale blue dot.
-                </p>
-                <div class="custom-owl">
-                    <img class="custom-carousel-img" src="./owl-caro.jpg" alt="Client">
-                    <div>
-                        <h5>John Smith</h5>
-                        <span class="custom-qualification">GURU</span>
-                    </div>
-                </div>
-            </div>
-            <div class="custom-item">  
-                <p>
-                    Globular star cluster, another world brain is the seed of intelligence a billion trilliobits of moving fluff hearts of the stars. Hypatia preserve and cherish that pale blue dot.
-                </p>
-                <div class="custom-owl">
-                    <img class="custom-carousel-img" src="./owl-caro.jpg" alt="Client">
-                    <div>
-                        <h5>Peter Hall</h5>
-                        <span class="custom-qualification">CEO</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sec-11-second">
-            <div class="logos" >
-                <img src="./footlogo.png" alt="logo">
-                <img src="./footlogo-2.png" alt="logo">
-            </div>
-            <div class="logos">
-                <img src="./footlogo-3.png" alt="logo">
-                <img src="./footlogo-4.png" alt="logo">
-            </div>
-            <div class="logos">
-                <img src="./footlogo-5.png" alt="logo">
-                <img src="./footlogo-6.png" alt="logo">
-            </div>
-        </div>
-    </div>
-
-    <div class="section-12 my-container" id="contact">
-        <div class="sec-12-first">
-            <img src="./section-img's.png" alt="logo"><br />
-            <h2 class="forlargescreen">
-                STAY <br /> IN <br /> TOUCH
-            </h2>
-            <h2 class="forsmallscreen">
-                STAY IN TOUCH
-            </h2>
-            <h3>
-                Use contact <br />form on the right
-            </h3>
-        </div>
-        <div class="sec-12-second">
-            <p>Ghostly white figures in coveralls and helmets are soflty dancing of the cosmic</p>
-            <div> <input placeholder="NAME" type="text" name="name" id="name"></div>
-            <div> <input placeholder="EMAIL" type="email" name="email" id="email"></div>
-            <div> <input placeholder="SUBJECT" type="text" name="subject" id="subject"></div>
-            <div> <textarea placeholder="MESSAGE" name="message" id="message" cols="30" rows="10"></textarea></div>
-            <div class="contactbtn">
-                SEND
-            </div>
-            <div class="contactinfo">
-                <div>
-                    <h5>Flatland! A very small stage in a vast cosmic arena great turbulent clouds encyclopaedia galactica star stuff harvesting</h5>
-                </div>
-                <div>
-                    <h4>Phone: +321 123 456 7 <br> E-mail: hello@cocobasic.com <br> Website: www.yoursitegoeshere.com</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-13">
+    <p>My dear Brigita, thank you for doing such incredible work; in my opinion, you are the absolute best at what you do – top of the TOP! I still tear up when I think of how you invested yourself completely in supporting my healing process. You helped me sincerely and unconditionally! You prepared me for and guided me through the process of hypnosis with gentleness, grace and complete steadiness and confidence at the same time. I could feel my body relax completely and a sense of relief came over me, as calmness flooded every cell in my body – a truly divine sensation. And my mind, well, my mind was… I guess the best way to describe it is: it felt like it had just been operated on. How could it be any different, I was unearthing and changing thought patterns I’ve been living with for the past 43 years! Oh my god! Even now, as I write this, tears of gratitude are flowing down my cheeks. Thank you for helping me get to the source of my problems and the subconscious beliefs that have been plaguing my life. I listen to the self-hypnosis recording you gave me every morning and every evening. Sometimes the voice of my nagging ego chimes in, saying: “Why are you listening to this stuff? It’s all a bunch of nonsense anyway, you’re not going to solve anything this way, nothing will ever change for you,” and I kindly yet firmly reply: “My dear ego, it’s my turn now.” . Oh yes :-))) this is how I move forward – step by step, with immense gratitude in my heart.</p>
+</div>
+<div class="col-sm-12 col-md-8 col-lg-4 sec-7-content">
+        <h2>Marta M.</h2>
+        <h3>OFFICE MANAGER</h3>
         <div>
-            <h2>35</h2>
-            <h4>Terabytes of files uploaded
-
-            </h4>
+            <img src="./3-150x150.png.webp" alt="">
         </div>
-
-        <div>
-            <h2>67K </h2>
-            <h4>Lines of CSS code wrote
-
-            </h4>
-        </div>
-        <div>
-            <h2>74</h2>
-            <h4>Cups of coffee drinked per week</h4>
-
-
-        </div>
-        <div>
-            <h2>389</h2>
-            <h4>Happy clients served
-
-            </h4>
-        </div>
+        <p>I didn’t know what to expect from my therapy session with Brigita, it was my first time being hypnotized. To me, it felt like “falling” into a movie, but you still know you’re safe in Brigita’s caring hands, relaxingly positioned on the most comfortable couch ever. :). Brigita guided me through some important moments from my past that I was not consciously aware of and couldn’t really recollect prior to this experience. Turns out, these instances were turning points that greatly impacted me later in life, an impact I had been completely unaware of. Full disclosure – I cried like a baby. I instantly felt an indescribable sense of relief and pure love. After 6 months of therapy I can sincerely say that it is because of my experience with Brigita that I am now able to make life choices different than before. I react differently, I look at certain things differently, I feel like I am more authentic and I honor my energy. I am true to myself and I am finally me, the me I always wanted to express. To me, this feeling of clarity, inner satisfaction, relief and fulfilment is worth all the riches in the world. It’s amazing how certain things from my childhood were reflected in my adult life. If you want to improve the quality of your life and get rid of everything that hinders you, I absolutely recommend Brigita’s hypno-transformational method.</p>
     </div>
-    <footer>
-        <div class="foot-1">
-            <h3>hello@cocobasic.com</h3>
-            <h5> 987.654.321 </h5>
+    <div class="col-sm-12 col-md-8 col-lg-4 sec-7-content">
+            <h2>Iris V..</h2>
+            <h3>JOURNALIST</h3>
+            <div>
+                <img src="./2-150x150.png.webp" alt="">
+            </div>
+            <p>In life, we often act in a way we might not want to and behave as if we didn’t really know ourselves at the time. I used to carry around thought patterns that made my life difficult, and I had the feeling that I was often caught in a web of hidden inner impulses that I could not explain. Hypnotherapy with Brigita opened my eyes – or, more accurately, my internal sight. Before embarking on this journey, I tried to resolve many of my unwanted personality traits or personal distress on a conscious level, but it was only through hypnosis that I was able to discover what was really hidden in the depths of my mind. Working with Brigita has been a truly unique experience. My initial feelings of confusion and surprise upon discovering hidden parts of myself were quickly replaced by extremely pleasant feelings of relief and inner peace. I feel like this is me now, the real ME. Brigita, thank you! Because of you, I look forward to all the good things that life has to offer.</p>
         </div>
-        <div class="foot-2">
-            <h6> New York <br> Some St. 258 <br> United States</h6>
+</div>
+</div>
+<div class="section-1 second-sec-1  animate__animated animate__fadeInUp">
+        <h4>START NOW</h4>
+        <h2>A library of knowledge</h2>
+        <p>Understanding how our mind works is the key to success. I invite you to the library of knowledge, where you can find a lot of video and text content that will help you understand your mind.</p>
+       
+   </div>
+    <div class="container-fluid">   
+    <div class="section-8 row  animate__animated animate__fadeInUp">
+        <div class=" col-lg-4 sec-8-content">
+            <div class="sec-8-img">
+                <img src="./sec-4.webp" alt="">
+            </div>
+            <div class="sec-8-text">
+                <h4>HYPNOTHERAPY</h4>
+                <h3>When positive thinking completely fails us</h3>
+            </div>
         </div>
-        <div class="foot-3">
-            <div><i class="fa-brands fa-twitter"></i></div>
-            <div><i class="fa-brands fa-facebook-f"></i></div>
-            <div><i class="fa-brands fa-behance"></i></div>
-            <div><i class="fa-solid fa-basketball"></i></div>
-        </div>
-        <div class="foot-4">
-            © 2024 Cardea React Template by CocoBasic
-        </div>
-    </footer>
+        <div class="col-lg-4 sec-8-content">
+                <div class="sec-8-img">
+                    <img src="./sec-4-2.webp" alt="">
+                </div>
+                <div class="sec-8-text">
+                    <h4>HYPNOTHERAPY</h4>
+                    <h3>Creating a better life with the help of hypnosis</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 sec-8-content">
+                    <div class="sec-8-img">
+                        <img src="./sec-4-3.webp" alt="">
+                    </div>
+                    <div class="sec-8-text">
+                        <h4>HYPNOTHERAPY</h4>
+                        <h3>Tame your mental pet
+                            </h3>
+                    </div>
+                </div>
+    </div> 
+</div>
 
-    <script src="./index.js"></script>
-   
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
+<div class="section-9">
+    <h2>FAQ</h2>
+    <h6>Frequently Asked Questions and Answers</h6>
+</div>
 
+<div class="section-10">
+        <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            IS HYPNOSIS SAFE?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                            Yes, hypnosis is completely safe, as it is a natural state of mind that we unknowingly experience several times a day. Guided hypnosis, however, is specifically designed to solve particular problems, since – under the guidance of a qualified hypnotherapist – the process is more intense and deeper.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            IS HYPNOSIS SUITABLE FOR EVERYONE?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                            Hypnosis is suitable for anyone who wants to implement changes in their life. However, it is not suitable for people diagnosed with mental illnesses, such as bipolar disorder, schizophrenia or any other forms of mental disease.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            WHAT DOES BEING IN A STATE OF HYPNOSIS FEEL LIKE?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                            As the state of hypnosis or trance deepens, the body becomes more and more relaxed, the muscles become loose, our thoughts calm down and a feeling of detachment appears in our minds. It is an extremely pleasant feeling of complete relaxation, which is often described as a state of consciousness between waking and sleeping.
+                    </div>
+                  </div>
+                </div>
+                  <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                I DON'T BELIEVE I CAN BE HYPNOTIZED.
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                                Because hypnosis is a natural state of consciousness, it means that anyone can be hypnotized. Only those who resist hypnosis or feel too much fear have trouble transitioning into a state of hypnosis. Successful hypnosis requires an individual’s desire for change and trust in their therapist.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                WHAT IF I CAN'T WAKE UP AFTER BEING HYPNOTIZED?
+                          </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                                Hypnosis is an altered state of consciousness that can be interrupted at any given moment, however, because hypnosis is not the same as being asleep, we cannot simply “wake up” from it. But rest assured –  in the long history of hypnosis there has never been a recorded instance of someone not returning to a normal state of consciousness after being hypnotized. Anyone can, with the help of a therapist or by their own free will, transition from a state of hypnosis to full awareness.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                HYPNOSIS SCARES ME - WHAT CAN I DO?
+                          </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                                Hypnosis is a state of deep relaxation in which we are completely aware of what is happening within us at every given moment and where we have total control over ourselves. All of the events and emotions that occur in a state of hypnosis are merely observed, not re-experienced. Your therapist will always be there to safely guide you through the events of the past and the feelings that come up during your session. The most important piece of advice that can be offered to someone who is undergoing hypno-therapy is to trust and surrender – you are safe and nothing bad can happen to you.
+
+
+                          </div>
+                        </div>
+                    </div>
+                        <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        CAN MY HYPNOTHERAPIST TAKE CONTROL OF MY LIFE?
+                                  </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                        When you are in a state of hypnosis no one has the power to take control of your thoughts or your life in general. Hypnosis is designed to help us accept new suggestions into our subconscious, however we always accept only those thoughts and beliefs that are in line with our values, and new ideas we intentionally want to sow into our subconscious.
+                                  </div>
+                                </div>
+                </div>
+              </div>
+</div>
+
+<div class="section-11">
+    <div class="sec-11-heading"><h5>STAY IN CONTACT</h5></div>
+    <div class="sec-11-content">
+        <h3>Join my community
+            </h3>
+            
+            <div><input placeholder="E-mail" type="email" name="email" id="email"> <h5 class="button-5">JOIN</h5>  </div>
+    </div>
+</div>
+
+<div class="all-logo">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+</div>
+</div>
+<footer>
+<div class="footlogo">
+  <img src="./footer logo.webp" alt="">
+</div>
+
+<div class="allfootlinks container-fluid">
+  <div class="foot1 col-lg-3">
+    <h6>Menu</h6>
+    <a href="">Home</a>
+    <a href="">Hypno-transformational method HTM™</a>
+    <a href="">Workshops and lectures</a>
+    <a href="">About me</a>
+    <a href="">Blog</a>
+    <a href="">Contact</a>         
+  </div>
+  <div class="foot2 col-lg-3">
+    <h6>Community</h6>
+    <a href="">Membership</a>
+   <a href="">
+      Privacy policy
+      </a>
+   <a href="">Terms and conditions</a>
+ 
+  </div>
+  <div class="foot3 col-lg-4">
+    <h6>Let's stay connected</h6>
+    <p>Are we already friends on social media? Use the buttons below to keep in touch</p>
+  </div>
+</div>
+
+<div class="copyrightpara">
+  <p>© Copyright BrigitaBračko Hypno-transformational method HTM™ | Design: VOBI</p>
+</div>
+
+</footer>
+
+
+<script src="./index.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
 </html>
