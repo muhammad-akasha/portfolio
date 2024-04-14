@@ -109,7 +109,17 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleRotate();
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  let html = document.documentElement;
 
+  // Hide scrollbar immediately
+  html.style.overflow = "hidden";
+
+  // Restore scrollbar after a delay of 3 seconds
+  setTimeout(function() {
+    html.style.overflow = "auto";
+  }, 3000);
+});
 
 document.addEventListener("DOMContentLoaded", function() {
   // Add a delay of 3 seconds before hiding the overlay
@@ -117,8 +127,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var overlay = document.getElementById("overlay");
     overlay.style.display = "none";
     document.body.classList.add("spinner-shown");
-  }, 1500); // Change the delay to 3000 milliseconds (3 seconds)
+  }, 3000); // Change the delay to 3000 milliseconds (3 seconds)
 });
+
 
 
 window.addEventListener("scroll", function() {
